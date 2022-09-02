@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 #include "main.h"
-#include "init.h"
+#include "tick.h"
 #include "util/logging.h"
 
 static HMODULE g_hmodule = NULL;

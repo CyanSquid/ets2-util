@@ -128,7 +128,7 @@ static bool init_pointers(void)
 
     if (location = scan(&foundall, "Speed Limiter", "67 5F 75 73 65 5F 73 70 65 65 64 5F 6C 69 6D 69 74 65 72"))
     {
-        g_use_speed_limiter = location;
+        game__g_use_speed_limiter = location;
     }
 
     if (location = scan(&foundall, "Activce Player", "4C 8B 3D ? ? ? ? F3 0F 10 1D ? ? ? ? 49 3B 76 50 0F 83"))

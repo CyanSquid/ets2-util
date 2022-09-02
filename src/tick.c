@@ -1,7 +1,7 @@
 #include <stddef.h>
 #include <Windows.h>
 
-#include "init.h"
+#include "tick.h"
 #include "util/pattern/pattern_scan.h"
 #include "util/pointer.h"
 #include "util/logging.h"

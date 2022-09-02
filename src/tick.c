@@ -33,7 +33,7 @@ static bool get_module_region(const char* module, unsigned char** lo, unsigned c
     module_n_header = (IMAGE_NT_HEADERS*)(((unsigned char*)(module_d_header)) + module_d_header->e_lfanew);
 
     *lo = (unsigned char*)(module_handle);
-    *hi = (unsigned char*)(module_handle)+module_n_header->OptionalHeader.SizeOfCode;
+    *hi = (unsigned char*)(module_handle)+module_n_header->OptionalHeader.SizeOfImage;
 
     return true;
 }
@@ -126,10 +126,10 @@ static bool init_pointers(void)
         return false;
     }
 
-    /*if (location = scan(&foundall, "Speed Limiter", "67 5F 75 73 65 5F 73 70 65 65 64 5F 6C 69 6D 69 74 65 72"))
+    if (location = scan(&foundall, "Speed Limiter", "67 5F 75 73 65 5F 73 70 65 65 64 5F 6C 69 6D 69 74 65 72"))
     {
         g_use_speed_limiter = location;
-    }*/
+    }
 
     if (location = scan(&foundall, "Activce Player", "4C 8B 3D ? ? ? ? F3 0F 10 1D ? ? ? ? 49 3B 76 50 0F 83"))
     {
